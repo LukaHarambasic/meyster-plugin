@@ -1,0 +1,28 @@
+{
+  "name": "meyster",
+  "displayName": "Meyster",
+  "version": "1.0.0",
+  "description": "Quotes, invoices and customers for German trade businesses. Connects Claude to your Meyster account and drafts documents for you to review and finish in Meyster.",
+  "author": {
+    "name": "Harambasic Consulting",
+    "email": "luka@meyster.work",
+    "url": "https://meyster.work"
+  },
+  "homepage": "https://meyster.work",
+  "repository": "https://github.com/LukaHarambasic/meyster-plugin",
+  "license": "LicenseRef-Proprietary",
+  "icon": "./assets/logo.png",
+  "keywords": [
+    "meyster",
+    "handwerk",
+    "angebot",
+    "rechnung",
+    "invoice",
+    "quote",
+    "construction",
+    "germany"
+  ],
+  "documentationUrl": "https://meyster.work/hilfe",
+  "supportUrl": "mailto:luka@meyster.work",
+  "privacyPolicyUrl": "https://meyster.work/datenschutz"
+}

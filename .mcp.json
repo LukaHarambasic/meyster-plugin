@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "meyster": {
+      "type": "http",
+      "url": "https://meyster.work/mcp"
+    }
+  }
+}

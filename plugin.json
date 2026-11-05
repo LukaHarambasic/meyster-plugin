@@ -1,0 +1,122 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "meyster",
+  "version": "1.0.0",
+  "description": "Quotes, invoices and customers for German trade businesses.",
+  "author": {
+    "name": "Harambasic Consulting",
+    "email": "luka@meyster.work",
+    "url": "https://meyster.work"
+  },
+  "homepage": "https://meyster.work",
+  "repository": "https://github.com/LukaHarambasic/meyster-plugin",
+  "license": "LicenseRef-Proprietary",
+  "keywords": [
+    "handwerk",
+    "angebot",
+    "rechnung",
+    "quotes",
+    "invoices",
+    "construction",
+    "germany"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Meyster",
+        "shortDescription": "Quotes and invoices for trades",
+        "longDescription": "Meyster is business software for German trade and construction businesses (Handwerk): tilers, drywall builders, electricians, painters, plumbers and general contractors. Connect your Meyster account to draft quotes and invoices from a plain description of the job, find and update customers and projects, calculate quantities for walls, floors and ceilings, and search your firm's own catalog, material prices and the Meyster help centre.\n\nChatGPT works as you, with exactly the rights your role has in Meyster, and only ever sees your own company's data. It drafts, and you decide: finalizing, numbering, sending and cancelling a document always happen in Meyster, because in Germany a finalized invoice may never change. Every draft comes with a link that opens it in Meyster for review.\n\nInteractive cards show a customer, the positions of a quote or invoice draft, which you can edit in place, and the document's PDF right in the conversation.\n\nLimitations: Meyster is built for German businesses. Document texts are written in your company's language, and legal notes stay German. You need a Meyster account, and your company owner switches the connection on under Firmeneinstellungen, Automatisierung, \"KI-Apps verbinden (MCP)\". You approve ChatGPT once on a Meyster consent page and can disconnect it at any time.",
+        "developerName": "Harambasic Consulting",
+        "category": "Productivity",
+        "capabilities": [
+          "Draft quotes and invoices",
+          "Edit drafts",
+          "Find and update customers and projects",
+          "Calculate construction quantities",
+          "Search catalog and material prices",
+          "Show document PDFs"
+        ],
+        "websiteURL": "https://meyster.work",
+        "supportURL": "https://meyster.work/hilfe",
+        "privacyPolicyURL": "https://meyster.work/datenschutz",
+        "termsOfServiceURL": "https://meyster.work/agb",
+        "defaultPrompt": [
+          "Erstelle ein Angebot für Herrn Weber: Trockenbauwand 4,5 × 2,6 m.",
+          "Zeig mir die offenen Rechnungen von diesem Monat.",
+          "Zeig mir den Kunden Wohnbau Vorderpfalz."
+        ],
+        "brandColor": "#C85200",
+        "brandColorDark": "#EF6505",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      },
+      "onboardingSkill": "./skills/einrichten/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find a customer",
+              "prompt": "Find the customer Wohnbau Vorderpfalz.",
+              "tools_triggered": "search_customers",
+              "expected_behavior": "Returns the customer Wohnbau Vorderpfalz GmbH with its address from the demo company."
+            },
+            {
+              "description": "Show a customer card",
+              "prompt": "Show me the customer card of Wohnbau Vorderpfalz.",
+              "tools_triggered": "search_customers, show_customer_card",
+              "expected_behavior": "Finds the customer and renders the customer card with contact, address and payment terms."
+            },
+            {
+              "description": "Draft a quote from a job description",
+              "prompt": "Erstelle ein Angebot für Herrn Weber: Trockenbauwand 4,5 × 2,6 m stellen und spachteln.",
+              "tools_triggered": "search_customers, calculate_construction, plan_document_structure, create_quote_draft",
+              "expected_behavior": "Creates a quote draft for Herr Weber with drywall positions and quantities, and hands over the review link. Says the quote is a draft, not sent."
+            },
+            {
+              "description": "Draft an invoice",
+              "prompt": "Erstelle eine Rechnung über eine Anfahrt für 45 Euro an Wohnbau Vorderpfalz.",
+              "tools_triggered": "search_customers, create_invoice_draft",
+              "expected_behavior": "Creates an invoice draft with one position Anfahrt at 45.00 EUR and hands over the review link. Does not finalize or number it."
+            },
+            {
+              "description": "Edit a draft",
+              "prompt": "Ändere im letzten Angebotsentwurf die Menge der ersten Position auf 2.",
+              "tools_triggered": "search_documents, get_entity_details, edit_document",
+              "expected_behavior": "Finds the latest quote draft, sets the first position's quantity to 2 after confirmation, and reports the new total."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Finalize an invoice",
+              "prompt": "Stelle die letzte Rechnung fertig und vergib eine Rechnungsnummer."
+            },
+            {
+              "description": "Send a quote",
+              "prompt": "Schicke das letzte Angebot per E-Mail an den Kunden."
+            },
+            {
+              "description": "Delete a customer",
+              "prompt": "Lösche den Kunden Wohnbau Vorderpfalz."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Meyster drafts business documents. The plugin sells nothing and processes no payments."
+      },
+      "publication": {
+        "countries": [
+          "DE",
+          "AT",
+          "CH"
+        ],
+        "release_notes": "Initial release: quote and invoice drafts, customers and projects, quantity calculation, catalog and help search, and cards for customers, draft positions and document PDFs.",
+        "translations": {
+          "de-DE": {
+            "subtitle": "Angebote und Rechnungen",
+            "description": "Meyster ist die Bürosoftware für Handwerks- und Baubetriebe. Verbinden Sie Meyster, um Angebote und Rechnungen aus einer einfachen Beschreibung des Auftrags zu entwerfen, Kunden und Projekte zu finden und zu pflegen, Mengen zu berechnen und den eigenen Katalog, Materialpreise und die Meyster-Hilfe zu durchsuchen.\n\nChatGPT arbeitet als Sie, mit genau den Rechten Ihrer Rolle in Meyster. Es entwirft, und Sie entscheiden: Fertigstellen, Nummerieren, Versenden und Stornieren passieren immer in Meyster. Jeder Entwurf kommt mit einem Link, der ihn in Meyster zur Prüfung öffnet.\n\nInteraktive Karten zeigen einen Kunden, die Positionen eines Entwurfs zum direkten Bearbeiten und das PDF des Dokuments direkt im Chat.\n\nSie brauchen ein Meyster-Konto. Die Inhaberin oder der Inhaber schaltet unter Firmeneinstellungen, Automatisierung \"KI-Apps verbinden (MCP)\" frei."
+          }
+        }
+      }
+    }
+  }
+}

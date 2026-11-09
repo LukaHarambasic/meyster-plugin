@@ -23,6 +23,7 @@
     "germany"
   ],
   "documentationUrl": "https://meyster.work/hilfe",
-  "supportUrl": "mailto:luka@meyster.work",
-  "privacyPolicyUrl": "https://meyster.work/datenschutz"
+  "supportUrl": "https://meyster.work/hilfe",
+  "privacyPolicyUrl": "https://meyster.work/datenschutz",
+  "termsOfServiceUrl": "https://meyster.work/agb"
 }

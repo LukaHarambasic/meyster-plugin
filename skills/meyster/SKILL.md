@@ -1,6 +1,6 @@
 ---
 name: meyster
-description: "Arbeit in Meyster, der Software für Handwerksbetriebe: Angebote und Rechnungen als Entwürfe, Kunden, Projekte, Katalog, Materialpreise und Fragen zur Bedienung. Use whenever the user mentions Meyster, or a quote (Angebot), invoice (Rechnung), customer (Kunde) or project (Projekt) of their trade business."
+description: "Arbeit in Meyster, der Software für Handwerksbetriebe: Angebote und Rechnungen als Entwürfe, Kunden, Projekte, Katalog, Materialpreise und Fragen zur Bedienung. Nutze den Skill, sobald der Nutzer Meyster erwähnt oder ein Angebot (quote), eine Rechnung (invoice), einen Kunden (customer) oder ein Projekt (project) seines Betriebs."
 ---
 
 # Meyster

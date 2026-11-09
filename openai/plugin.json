@@ -55,53 +55,53 @@
         "test_cases": {
           "positive": [
             {
-              "description": "Find a customer",
-              "prompt": "Find the customer Wohnbau Vorderpfalz.",
+              "description": "Kunden finden",
+              "prompt": "Finde den Kunden Wohnbau Vorderpfalz.",
               "tools_triggered": "search_customers",
-              "expected_behavior": "Returns the customer Wohnbau Vorderpfalz GmbH with its address from the demo company."
+              "expected_behavior": "Liefert den Kunden Wohnbau Vorderpfalz GmbH mit seiner Adresse aus dem Demobetrieb."
             },
             {
-              "description": "Show a customer card",
-              "prompt": "Show me the customer card of Wohnbau Vorderpfalz.",
+              "description": "Kundenkarte zeigen",
+              "prompt": "Zeig mir die Kundenkarte von Wohnbau Vorderpfalz.",
               "tools_triggered": "search_customers, show_customer_card",
-              "expected_behavior": "Finds the customer and renders the customer card with contact, address and payment terms."
+              "expected_behavior": "Findet den Kunden und zeigt die Kundenkarte mit Kontakt, Adresse und Zahlungsbedingungen."
             },
             {
-              "description": "Draft a quote from a job description",
+              "description": "Angebot aus einer Auftragsbeschreibung entwerfen",
               "prompt": "Erstelle ein Angebot für Herrn Weber: Trockenbauwand 4,5 × 2,6 m stellen und spachteln.",
               "tools_triggered": "search_customers, calculate_construction, plan_document_structure, create_quote_draft",
-              "expected_behavior": "Creates a quote draft for Herr Weber with drywall positions and quantities, and hands over the review link. Says the quote is a draft, not sent."
+              "expected_behavior": "Legt einen Angebotsentwurf für Herrn Weber mit Trockenbaupositionen und Mengen an und gibt den Link zur Prüfung weiter. Sagt, dass das Angebot ein Entwurf ist und nicht versendet wurde."
             },
             {
-              "description": "Draft an invoice",
+              "description": "Rechnung entwerfen",
               "prompt": "Erstelle eine Rechnung über eine Anfahrt für 45 Euro an Wohnbau Vorderpfalz.",
               "tools_triggered": "search_customers, create_invoice_draft",
-              "expected_behavior": "Creates an invoice draft with one position Anfahrt at 45.00 EUR and hands over the review link. Does not finalize or number it."
+              "expected_behavior": "Legt einen Rechnungsentwurf mit einer Position Anfahrt über 45,00 EUR an und gibt den Link zur Prüfung weiter. Stellt die Rechnung nicht fertig und vergibt keine Nummer."
             },
             {
-              "description": "Edit a draft",
+              "description": "Entwurf ändern",
               "prompt": "Ändere im letzten Angebotsentwurf die Menge der ersten Position auf 2.",
               "tools_triggered": "search_documents, get_entity_details, edit_document",
-              "expected_behavior": "Finds the latest quote draft, sets the first position's quantity to 2 after confirmation, and reports the new total."
+              "expected_behavior": "Findet den letzten Angebotsentwurf, setzt nach Bestätigung die Menge der ersten Position auf 2 und nennt die neue Summe."
             }
           ],
           "negative": [
             {
-              "description": "Finalize an invoice",
+              "description": "Rechnung fertigstellen",
               "prompt": "Stelle die letzte Rechnung fertig und vergib eine Rechnungsnummer."
             },
             {
-              "description": "Send a quote",
+              "description": "Angebot versenden",
               "prompt": "Schicke das letzte Angebot per E-Mail an den Kunden."
             },
             {
-              "description": "Delete a customer",
+              "description": "Kunden löschen",
               "prompt": "Lösche den Kunden Wohnbau Vorderpfalz."
             }
           ]
         },
         "commerce": false,
-        "commerce_description": "Meyster drafts business documents. The plugin sells nothing and processes no payments."
+        "commerce_description": "Meyster entwirft Geschäftsdokumente. Das Plugin verkauft nichts und wickelt keine Zahlungen ab."
       },
       "publication": {
         "countries": [

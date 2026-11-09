@@ -105,9 +105,7 @@
       },
       "publication": {
         "countries": [
-          "DE",
-          "AT",
-          "CH"
+          "DE"
         ],
         "release_notes": "Erste Version: Entwürfe für Angebote und Rechnungen, Kunden und Projekte, Mengenberechnung, Suche in Katalog und Hilfe sowie Karten für Kunden, Entwurfspositionen und Dokument-PDFs."
       }

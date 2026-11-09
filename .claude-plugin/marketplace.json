@@ -1,6 +1,6 @@
 {
   "name": "meyster-plugins",
-  "description": "Plugins by Meyster for German trade businesses",
+  "description": "Plugins von Meyster für Handwerksbetriebe",
   "owner": {
     "name": "Harambasic Consulting",
     "email": "luka@meyster.work"
@@ -9,7 +9,7 @@
     {
       "name": "meyster",
       "source": "./",
-      "description": "Draft quotes and invoices, find customers and calculate quantities in your Meyster account."
+      "description": "Angebote und Rechnungen entwerfen, Kunden finden und Mengen berechnen in deinem Meyster-Konto."
     }
   ]
 }

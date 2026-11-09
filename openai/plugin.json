@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "meyster",
   "version": "1.0.0",
-  "description": "Quotes, invoices and customers for German trade businesses.",
+  "description": "Angebote, Rechnungen und Kunden für Handwerksbetriebe.",
   "author": {
     "name": "Harambasic Consulting",
     "email": "luka@meyster.work",
@@ -24,17 +24,17 @@
     "com.openai": {
       "interface": {
         "displayName": "Meyster",
-        "shortDescription": "Quotes and invoices for trades",
-        "longDescription": "Meyster is business software for German trade and construction businesses (Handwerk): tilers, drywall builders, electricians, painters, plumbers and general contractors. Connect your Meyster account to draft quotes and invoices from a plain description of the job, find and update customers and projects, calculate quantities for walls, floors and ceilings, and search your firm's own catalog, material prices and the Meyster help centre.\n\nChatGPT works as you, with exactly the rights your role has in Meyster, and only ever sees your own company's data. It drafts, and you decide: finalizing, numbering, sending and cancelling a document always happen in Meyster, because in Germany a finalized invoice may never change. Every draft comes with a link that opens it in Meyster for review.\n\nInteractive cards show a customer, the positions of a quote or invoice draft, which you can edit in place, and the document's PDF right in the conversation.\n\nLimitations: Meyster is built for German businesses. Document texts are written in your company's language, and legal notes stay German. You need a Meyster account, and your company owner switches the connection on under Firmeneinstellungen, Automatisierung, \"KI-Apps verbinden (MCP)\". You approve ChatGPT once on a Meyster consent page and can disconnect it at any time.",
+        "shortDescription": "Angebote und Rechnungen",
+        "longDescription": "Meyster ist die Bürosoftware für Handwerks- und Baubetriebe: Fliesenleger, Trockenbauer, Elektriker, Maler, Installateure und Generalunternehmer. Verbinde dein Meyster-Konto, um Angebote und Rechnungen aus einer einfachen Beschreibung des Auftrags zu entwerfen, Kunden und Projekte zu finden und zu pflegen, Mengen für Wände, Böden und Decken zu berechnen und deinen eigenen Katalog, deine Materialpreise und die Meyster-Hilfe zu durchsuchen.\n\nChatGPT arbeitet als du, mit genau den Rechten deiner Rolle in Meyster, und sieht nur die Daten deines eigenen Betriebs. Es entwirft, und du entscheidest: Fertigstellen, Nummerieren, Versenden und Stornieren passieren immer in Meyster, denn eine fertiggestellte Rechnung darf in Deutschland nie mehr geändert werden. Jeder Entwurf kommt mit einem Link, der ihn in Meyster zur Prüfung öffnet.\n\nInteraktive Karten zeigen einen Kunden, die Positionen eines Angebots- oder Rechnungsentwurfs zum direkten Bearbeiten und das PDF des Dokuments direkt im Chat.\n\nEinschränkungen: Meyster ist für Betriebe in Deutschland gebaut. Dokumenttexte stehen in der Sprache deines Betriebs, gesetzliche Hinweise bleiben Deutsch. Du brauchst ein Meyster-Konto, und die Inhaberin oder der Inhaber deines Betriebs schaltet die Verbindung unter Firmeneinstellungen, Automatisierung, \"KI-Apps verbinden (MCP)\" frei. Du bestätigst ChatGPT einmal auf einer Zustimmungsseite von Meyster und kannst die Verbindung jederzeit trennen.",
         "developerName": "Harambasic Consulting",
         "category": "Productivity",
         "capabilities": [
-          "Draft quotes and invoices",
-          "Edit drafts",
-          "Find and update customers and projects",
-          "Calculate construction quantities",
-          "Search catalog and material prices",
-          "Show document PDFs"
+          "Angebote und Rechnungen entwerfen",
+          "Entwürfe bearbeiten",
+          "Kunden und Projekte finden und pflegen",
+          "Baumengen berechnen",
+          "Katalog und Materialpreise durchsuchen",
+          "PDFs von Dokumenten anzeigen"
         ],
         "websiteURL": "https://meyster.work",
         "supportURL": "https://meyster.work/hilfe",
@@ -109,13 +109,7 @@
           "AT",
           "CH"
         ],
-        "release_notes": "Initial release: quote and invoice drafts, customers and projects, quantity calculation, catalog and help search, and cards for customers, draft positions and document PDFs.",
-        "translations": {
-          "de-DE": {
-            "subtitle": "Angebote und Rechnungen",
-            "description": "Meyster ist die Bürosoftware für Handwerks- und Baubetriebe. Verbinde Meyster, um Angebote und Rechnungen aus einer einfachen Beschreibung des Auftrags zu entwerfen, Kunden und Projekte zu finden und zu pflegen, Mengen zu berechnen und deinen eigenen Katalog, deine Materialpreise und die Meyster-Hilfe zu durchsuchen.\n\nChatGPT arbeitet als du, mit genau den Rechten deiner Rolle in Meyster. Es entwirft, und du entscheidest: Fertigstellen, Nummerieren, Versenden und Stornieren passieren immer in Meyster. Jeder Entwurf kommt mit einem Link, der ihn in Meyster zur Prüfung öffnet.\n\nInteraktive Karten zeigen einen Kunden, die Positionen eines Entwurfs zum direkten Bearbeiten und das PDF des Dokuments direkt im Chat.\n\nDu brauchst ein Meyster-Konto. Die Inhaberin oder der Inhaber schaltet unter Firmeneinstellungen, Automatisierung \"KI-Apps verbinden (MCP)\" frei."
-          }
-        }
+        "release_notes": "Erste Version: Entwürfe für Angebote und Rechnungen, Kunden und Projekte, Mengenberechnung, Suche in Katalog und Hilfe sowie Karten für Kunden, Entwurfspositionen und Dokument-PDFs."
       }
     }
   }

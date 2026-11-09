@@ -2,7 +2,7 @@
   "name": "meyster",
   "displayName": "Meyster",
   "version": "1.0.0",
-  "description": "Quotes, invoices and customers for German trade businesses. Connects Claude to your Meyster account and drafts documents for you to review and finish in Meyster.",
+  "description": "Angebote, Rechnungen und Kunden für Handwerksbetriebe. Verbindet Claude mit deinem Meyster-Konto und legt Entwürfe an, die du in Meyster prüfst und fertigstellst.",
   "author": {
     "name": "Harambasic Consulting",
     "email": "luka@meyster.work",

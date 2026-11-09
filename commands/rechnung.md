@@ -1,8 +1,8 @@
 ---
-description: Draft an invoice in Meyster for a customer and job
-argument-hint: "[customer and job]"
+description: Eine Rechnung in Meyster für einen Kunden und einen Auftrag entwerfen
+argument-hint: "[Kunde und Auftrag]"
 ---
 
-Load the `draft-workflow` skill with the Meyster tool `load_skill` and follow it to create an invoice draft in Meyster for: $ARGUMENTS
+Lade mit dem Meyster-Werkzeug `load_skill` den Skill `draft-workflow` und befolge ihn, um in Meyster einen Rechnungsentwurf anzulegen für: $ARGUMENTS
 
-If the customer or the job is unclear, ask first. Create a draft only, hand over the reviewUrl, and never claim the invoice is final or sent.
+Sind Kunde oder Auftrag unklar, frag zuerst nach. Lege nur einen Entwurf an, gib den reviewUrl weiter und behaupte nie, die Rechnung sei fertiggestellt oder versendet.

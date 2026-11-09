@@ -33,16 +33,16 @@ When the plugin is listed in the Claude Directory, add it from there instead. On
 | File | Read by |
 |---|---|
 | `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`, `.mcp.json`, `commands/` | Claude |
-| `plugin.json`, `mcp.json` | ChatGPT and Codex (Agent Plugins format) |
+| `openai/plugin.json`, `openai/mcp.json` | ChatGPT and Codex (Agent Plugins format) |
 | `skills/`, `assets/` | both |
 
-The ChatGPT package is a ZIP of the portable files only:
+The Agent Plugins manifests live in `openai/`, so Claude's plugin directory finds only one manifest in the root. The ChatGPT package is a ZIP with both manifests at its root, next to the shared files:
 
 ```
-zip -r meyster-openai.zip plugin.json mcp.json skills assets
+(cd openai && zip -r ../meyster-openai.zip plugin.json mcp.json) && zip -r meyster-openai.zip skills assets
 ```
 
-Upload it at https://platform.openai.com/plugins. Raise `version` in both manifests for every release.
+Upload it at https://platform.openai.com/plugins. Raise `version` in `.claude-plugin/plugin.json` and `openai/plugin.json` for every release.
 
 ## Data and privacy
 
